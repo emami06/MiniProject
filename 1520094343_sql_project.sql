@@ -48,11 +48,7 @@ AND membercost < ( 0.2 * monthlymaintenance ) ;
 Write the query without using the OR operator. */
 SELECT *
 FROM Facilities
-WHERE facid =1
-UNION
-SELECT *
-FROM Facilities
-WHERE facid =5;
+WHERE facid  IN (1,5);
 
 /* Q5: How can you produce a list of facilities, with each labelled as
 'cheap' or 'expensive', depending on if their monthly maintenance cost is
